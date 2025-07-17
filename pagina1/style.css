@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e1e2f, #43436c);
+  color: #fff;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(6px);
+  animation: fadeInDown 1s ease;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: #ff9f43;
+}
+
+.logo-imagem {
+  display: block;
+  max-width: 180px;
+  margin: 0 auto 30px auto;
+  border-radius: 15px;
+  animation: zoomIn 1s ease;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.2s ease;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff9f43;
+}
+
+h2, h3 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 0 3px #ff9f43;
+}
+.botao-orcamento {
+  background: #ff9f43;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.botao-orcamento:hover {
+  background: #ff6f00;
+  transform: scale(1.05);
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-imagem {
+    width: 80%;
+  }
+}
+
